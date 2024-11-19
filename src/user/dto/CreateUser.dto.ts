@@ -1,5 +1,5 @@
 import { IsEmail, IsNotEmpty, IsString, MinLength } from 'class-validator';
-import { IsUniqueEmail } from 'src/validators/isUniqueEmail.validator';
+import { IsUniqueEmail } from 'src/user/validators/isUniqueEmail.validator';
 
 export class CreateUserDTO {
   @IsNotEmpty({ message: 'Name can not be null.' })
