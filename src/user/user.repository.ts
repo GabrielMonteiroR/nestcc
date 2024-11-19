@@ -1,9 +1,12 @@
 export class userRepository {
     private users = [];
 
-    async saveUser(user){
+    async save(user){
         this.users.push(user);
-        console.log(user);
+    }
+
+    async getAll() {
+        return this.users;
     }
 
 }
