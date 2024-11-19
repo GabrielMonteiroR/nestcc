@@ -4,8 +4,10 @@ import { userRepository } from "./user.repository";
 @Controller("/users")
 export class UserController {
 
-    //Precisamos instanciar a lógico criada na repository para usar ela aqui 
-    private userRepo = new userRepository();
+    constructor(private userRepo: userRepository) {
+        
+    }
+
 
     @Post()
     async createUser(@Body() userData) {
