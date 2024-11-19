@@ -1,9 +1,10 @@
-import { Module } from "@nestjs/common";
-import { UserController } from "./user.controller";
-import { userRepository } from "./user.repository";
+import { Module } from '@nestjs/common';
+import { UserController } from './user.controller';
+import { UserRepository } from './user.repository';
+import { isUniqueEmailValidator } from 'src/validators/isUniqueEmail.validator';
 
 @Module({
-    controllers: [UserController],
-    providers: [userRepository]
+  controllers: [UserController],
+  providers: [UserRepository, isUniqueEmailValidator],
 })
 export class UserModule {}

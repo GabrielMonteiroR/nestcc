@@ -1,15 +1,19 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class userRepository {
-    private users = [];
+export class UserRepository {
+  private users = [];
 
-    async save(user){
-        this.users.push(user);
-    }
+  async save(user) {
+    this.users.push(user);
+  }
 
-    async getAll() {
-        return this.users;
-    }
+  async getAll() {
+    return this.users;
+  }
 
+  async EmailExists(email: string) {
+    const user = this.users.find((usuario) => usuario.email == email);
+    return user !== undefined;
+  }
 }
