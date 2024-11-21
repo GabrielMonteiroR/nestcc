@@ -11,6 +11,10 @@ export class UserService {
     private readonly userRepository: Repository<UserEntity>,
   ) {}
 
+  async createUser(userEntity: UserEntity) {
+    await this.userRepository.save(userEntity);
+  }
+
   async listUsers() {
     const dbUsers = await this.userRepository.find();
     const UsersMap = dbUsers.map(

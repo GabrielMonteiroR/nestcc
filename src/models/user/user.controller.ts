@@ -22,7 +22,7 @@ export class UserController {
     user.password = userData.password;
     user.id = uuid();
 
-    await this.userRepo.save(user);
+    await this.userService.createUser(user);
     return { user: new ListUsersDTO(user.id, user.name) };
   }
 
