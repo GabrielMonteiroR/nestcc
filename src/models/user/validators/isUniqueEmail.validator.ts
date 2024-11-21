@@ -8,8 +8,8 @@ import {
   ValidatorConstraint,
   ValidatorConstraintInterface,
 } from 'class-validator';
-import { UserEntity } from 'src/models/sports_complex/user/user.entity';
 import { Repository } from 'typeorm';
+import { UserEntity } from '../user.entity';
 
 @Injectable()
 @ValidatorConstraint({ async: true })
