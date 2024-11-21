@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { UserModule } from './user/user.module';
-import { SportsComplexModule } from './sports_complex/sportsComplex.module';
+import { UserModule } from './models/user/user.module';
+import { SportsComplexModule } from './models/sports_complex/sportsComplex.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PostgresConfigService } from './config/postgres.config.service';
 import { ConfigModule } from '@nestjs/config';
