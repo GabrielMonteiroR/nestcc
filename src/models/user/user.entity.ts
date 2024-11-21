@@ -1,4 +1,10 @@
-import { Column, Entity } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  DeleteDateColumn,
+  Entity,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity({ name: 'users' })
 export class UserEntity {
@@ -12,4 +18,13 @@ export class UserEntity {
 
   @Column({ name: 'password', length: 255, nullable: false })
   password: string;
+
+  @CreateDateColumn({ name: 'created_at' })
+  createdAt: string;
+
+  @UpdateDateColumn({ name: 'updated_at' })
+  updatedAt: string;
+
+  @DeleteDateColumn({ name: 'deleted_at' })
+  deletedAt: string;
 }
