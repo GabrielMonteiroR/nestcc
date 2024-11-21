@@ -7,4 +7,4 @@ import { isUniqueEmailValidator } from 'src/user/validators/isUniqueEmail.valida
   controllers: [UserController],
   providers: [UserRepository, isUniqueEmailValidator],
 })
-export class UserModule { }
+export class UserModule {}
